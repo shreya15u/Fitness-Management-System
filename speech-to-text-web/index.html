@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Speech to Text Converter</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero">
+        <p class="eyebrow">Voice Utility</p>
+        <h1>Speech to Text Converter</h1>
+        <p class="subtitle">
+          Speak into your microphone and convert your voice into editable text.
+        </p>
+      </section>
+
+      <section class="panel" aria-label="Speech recognition controls">
+        <div class="control-row">
+          <label for="language">Language</label>
+          <select id="language">
+            <option value="en-US">English (US)</option>
+            <option value="en-IN" selected>English (India)</option>
+            <option value="hi-IN">Hindi (India)</option>
+            <option value="bn-IN">Bengali (India)</option>
+            <option value="ta-IN">Tamil (India)</option>
+            <option value="te-IN">Telugu (India)</option>
+          </select>
+        </div>
+
+        <div class="button-grid">
+          <button id="startBtn" class="primary" type="button">Start Listening</button>
+          <button id="stopBtn" type="button" disabled>Stop</button>
+          <button id="copyBtn" type="button">Copy Text</button>
+          <button id="downloadBtn" type="button">Download</button>
+          <button id="clearBtn" class="danger" type="button">Clear</button>
+        </div>
+
+        <div class="status-card">
+          <span id="pulse" class="pulse" aria-hidden="true"></span>
+          <p id="status">Ready. Press Start Listening and allow microphone access.</p>
+        </div>
+
+        <label class="transcript-label" for="transcript">Transcript</label>
+        <textarea
+          id="transcript"
+          placeholder="Your converted text will appear here..."
+          spellcheck="true"
+        ></textarea>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
